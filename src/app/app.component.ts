@@ -1,12 +1,12 @@
 import { Component } from '@angular/core';
 import { RouterOutlet } from '@angular/router';
-import { FlujoComponent } from './controles/flujo/flujo.component';
-import { PropiedadesComponent } from './controles/propiedades/propiedades.component';
+import { PadreComponent } from './comunicacion/padre/padre.component';
+
 
 @Component({
   selector: 'app-root',
   standalone: true,
-  imports: [RouterOutlet,FlujoComponent, PropiedadesComponent],
+  imports: [RouterOutlet,PadreComponent],
   templateUrl: './app.component.html',
   styleUrl: './app.component.scss'
 })
