@@ -1,0 +1,30 @@
+<p>flujo works!</p>
+
+
+@if (esAdmin == true)  {
+    <h2> Usuario admin. autenticado </h2>
+}
+@else {
+    <h2>El usuarios NO admin  autenticado</h2>
+}
+
+<button *ngIf="esAdmin == true"> Enviar </button>
+
+<ul>
+    @for (item of ciudades; track item.id) {
+        <li>{{item.id}}  -   {{item.nombre}}</li>
+    }
+</ul>
+
+
+<select >
+    @for (item of ciudades; track item.id) {
+        <option>{{item.id}}  -   {{item.nombre}}</option>
+    }
+</select>
+
+<br>
+<br>
+
+<button (click)="guardar()" > Guardar </button>
+{{mensaje}}
