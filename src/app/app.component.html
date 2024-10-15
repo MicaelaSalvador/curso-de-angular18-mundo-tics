@@ -1,4 +1,10 @@
 
 <h1> App Angular </h1>
-<app-padre></app-padre>
+<nav>
+    <a   routerLink ="inicio" routerLinkActive="activebutton" class="button">Inicio</a>
+    |
+    <a routerLink ="primero" routerLinkActive="activebutton" class="button"> Primero </a>
+    |
+    <a [routerLink] ="['segundo',10,20]" routerLinkActive="activebutton" class="button"> Segundo</a>
+</nav>
 <router-outlet />
