@@ -7,9 +7,10 @@ import { HijoAComponent } from './enrutamiento/hijo-a/hijo-a.component';
 import { HijoBComponent } from './enrutamiento/hijo-b/hijo-b.component';
 import { verificarGuard } from './guard/verificar.guard';
 import { NoAuthComponent } from './guard/no-auth/no-auth.component';
-import { InicioComponent } from './enrutamiento/inicio/inicio.component';
+
 import { PlantillaComponent } from './formularios/plantilla/plantilla.component';
 import { ReactivoComponent } from './formularios/reactivo/reactivo.component';
+import { InicioComponent } from './enrutamiento/inicio/inicio.component';
 
 export const routes: Routes = [
     {

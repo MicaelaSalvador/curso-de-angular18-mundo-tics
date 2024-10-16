@@ -6,4 +6,10 @@ import { Injectable } from '@angular/core';
 export class UsuarioService {
 
   constructor() { }
+
+  usuarios = ['Juan','Carlos','Pedro'];
+
+  obtenerUsuarios(){
+    return this.usuarios;
+  }
 }
