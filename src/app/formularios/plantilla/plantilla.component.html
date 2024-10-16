@@ -1,0 +1,36 @@
+<h2>Datos del programador</h2>
+
+<div [hidden]="enviado">
+    <form (ngSubmit)="enviar()" #programadorForm="ngForm"  >
+    
+        <div>
+            <label for="nombre">Nombre : </label>
+            <input type="text" [(ngModel)]="programador.nombre" name="nombre" id="nombre" required  #nombre="ngModel">
+            <div [hidden]="nombre.valid" class="alert">
+                El nombre es  requerido
+            </div>
+        </div>
+        <br>
+        <div>
+            <label for="especialidad"> Especialidad: </label>
+            <select [(ngModel)]="programador.especialidad"  name="especialidad" id="especialidad"  required #especialidad="ngModel">
+                <option *ngFor="let especialidad of especialidades" [value]="especialidad" > {{especialidad}} </option>
+            </select>
+            <div [hidden]="especialidad.valid" class="alert">
+                La especialidad es  requerido
+            </div>
+        </div>
+    
+        <button type="submit" [disabled]="programadorForm.form.invalid">Enviar</button>
+    
+    </form>
+</div>
+<div [hidden]="enviado ==false">
+<h3>Los daros de enviaron.</h3>
+</div >
+
+
+<br>
+{{programador.nombre}}
+<br>
+{{programador.especialidad}}
