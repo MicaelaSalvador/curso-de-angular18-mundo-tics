@@ -12,6 +12,7 @@ import { PlantillaComponent } from './formularios/plantilla/plantilla.component'
 import { ReactivoComponent } from './formularios/reactivo/reactivo.component';
 import { InicioComponent } from './enrutamiento/inicio/inicio.component';
 import { PipeComponent } from './pipes/pipe/pipe.component';
+import { DirectivaComponent } from './direcivas/directiva/directiva.component';
 
 export const routes: Routes = [
     {
@@ -43,6 +44,11 @@ export const routes: Routes = [
     {
         path:'pipe',
         component: PipeComponent
+    }
+    ,
+    {
+        path:'directiva',
+        component: DirectivaComponent
     }
     ,
     {
