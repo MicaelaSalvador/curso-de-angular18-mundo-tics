@@ -1,6 +1,7 @@
 import { Component, inject } from '@angular/core';
 import {Router } from '@angular/router';
 import { UsuarioService } from '../../servicios/usuario.service';
+import { environment } from '../../../environments/environment';
 
 
 @Component({
@@ -15,6 +16,8 @@ export class InicioComponent {
   listar ="";
 
   constructor(private router: Router,private usuarioService: UsuarioService){
+
+    console.log('Environments',environment.produccion);
   this.listar = this.usuarioService.obtenerUsuarios().join(',');
   }
   
